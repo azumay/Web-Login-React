@@ -2,7 +2,7 @@ import * as React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Servicio from "../components/Servicios/Servicios";
 import { Link } from "react-router-dom";
-import FormCitaPrevia from "../components/Form/Form";
+import LoginForm from "../components/Form/LoginForm";
 export default function Inici(props) {
  
   return (
@@ -12,7 +12,7 @@ export default function Inici(props) {
       <h1 className="mb-5">Iniciar sesión</h1>
    
       <Servicio img="login.png" titulo="Login" />
-      <FormCitaPrevia/>
+      <LoginForm/>
       <Link to="/">Volver</Link>
       
     </div>
