@@ -27,7 +27,6 @@ export default function Inici(props) {
     nombre: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
     password: /^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{5,12}$/, // 5 a 12 digitos. Mayus y minusculas No simbolos
     correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
-    telefono: /^\d{7,14}$/, // 7 a 14 numeros.
   };
   const validarPassword2 = () => {
     if (password.campo.length > 0) {
@@ -74,6 +73,7 @@ export default function Inici(props) {
      
 			cambiarFormularioValido(true);
 			cambiarNombre({campo: '', valido: null});
+      cambiarApellido({campo: '', valido: null})
 			cambiarPassword({campo: '', valido: null});
 			cambiarPassword2({campo: '', valido: 'null'});
 			cambiarCorreo({campo: '', valido: null});
@@ -87,8 +87,6 @@ export default function Inici(props) {
     <div className="container">
       <div className="row">
         <h1 className="mb-5">Formulario de registro</h1>
-
-        <Servicio img="signup.png" titulo="Sign up" />
 
         <Formulario action="" onSubmit={onSubmit}>
           <Input

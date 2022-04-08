@@ -4,6 +4,7 @@ export const urlsApp = {
     login:"/Login",
     signup:"/SignUp",
     inici:"/",
+    profile:"/Profile"
     
 
 }
