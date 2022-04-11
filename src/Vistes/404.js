@@ -14,9 +14,11 @@ export default function NotFound(props) {
   return (
     <div className="container">
       <div className="row">
-        <h1 className="mb-5">Error 404</h1>
-        <div className="col-md-6 mb-5">
+        <div className="box-404">
+        <img src="404.gif" className="notfound"/>
+        <div >
         <Link to="/">Volver</Link>
+        </div>
         </div>
         </div>
     </div>

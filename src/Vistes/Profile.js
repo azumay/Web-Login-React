@@ -1,12 +1,11 @@
-import React, { useState, useContext } from "react";
+import React, { useContext } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Link } from "react-router-dom";
 import UserContext from "../context/UserContext";
-import { Button } from "bootstrap";
 import LogoutIcon from '@mui/icons-material/Logout';
 
 
-export default function Login(props) {
+export default function Login() {
  
   const {user, setUser} = useContext(UserContext);
 

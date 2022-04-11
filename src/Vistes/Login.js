@@ -2,7 +2,7 @@ import React, { useContext, useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Link } from "react-router-dom";
 import Input from "./../components/Form/Input";
-import { Navigate,useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import UserContext from "../context/UserContext";
 
@@ -15,7 +15,7 @@ import {
 
 
 
-export default function Login(props) {
+export default function Login() {
 
 
   const {user, setUser} = useContext(UserContext);
@@ -23,7 +23,10 @@ export default function Login(props) {
 
   const [correo, cambiarCorreo] = useState({ campo: "", valido: null });
   const [password, cambiarPassword] = useState({ campo: "", valido: null });
-  
+
+  const mensajeError = () =>{
+    return <h3>Correo o password incorrectos</h3>
+  }
   const onSubmit =  (e) => { 
    
     e.preventDefault();
@@ -48,6 +51,10 @@ export default function Login(props) {
 
         if (user !== undefined) {
           return navigate('/', { replace: true });
+        }else{
+          cambiarCorreo({campo: '', valido: 'false'});
+          cambiarPassword({campo: '', valido: 'false'});
+          
         }
     })
       .catch((error) => {
@@ -71,6 +78,7 @@ export default function Login(props) {
             label="Correo Electrónico"
             placeholder="john@correo.cat"
             name="correo"
+          
           />
           <Input
             estado={password}
@@ -78,6 +86,7 @@ export default function Login(props) {
             tipo="password"
             label="Contraseña"
             name="password"
+            leyendaError="El Mail o la Contraseña son incorrectos."
           />
 
           <Boton type="submit">Entrar</Boton>

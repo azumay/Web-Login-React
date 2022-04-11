@@ -146,3 +146,16 @@ input[type="submit"],
   font-size: 45px;
   cursor: pointer;
 }
+
+.notfound{ 
+  width: 450px !important;
+  margin: auto;
+  text-align: center;
+}
+.box-404{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  width: 50%;
+  margin: 50px auto;
+}
