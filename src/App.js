@@ -6,6 +6,10 @@ import { Navigate,Route, Routes, BrowserRouter as Router} from "react-router-dom
 import { ThemeProvider } from "@mui/material/styles";
 import { theme } from "./constants/Estils";
 
+/*ICONOS*/
+import FiberNewIcon from '@mui/icons-material/FiberNew';
+import HomeIcon from '@mui/icons-material/Home';
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 
 /*Vistas*/
 import Login from "./Vistes/Login";
@@ -18,16 +22,32 @@ import NotFound from "./Vistes/404";
 import UserContext from "./context/UserContext";
 
 function App() {
+
+  const elementsProba = [
+    {
+      nom: "Home",
+      icona: <HomeIcon />,
+      redireccio: urlsApp.inici
+    }, {
+      nom: "divider"
+    }, {
+      nom: "Sign up",
+      icona: <FiberNewIcon />,
+      redireccio: urlsApp.signup
+    }, {
+      nom: "Login",
+      icona: <AccountCircleIcon />,
+      redireccio: urlsApp.login
+    },
+  ];
   const [user, setUser] = useState() ;
 
-console.log("App.js: "+user)
-console.log(user === undefined)
  
   return (
     <UserContext.Provider value={{user, setUser}}>
     <div className="App">
       <ThemeProvider theme={theme}>
-        <NavegacioBar titol="Cloud Line">
+        <NavegacioBar elementsMenu={elementsProba} titol="Login con React">
       
           <Routes>
             <Route path={urlsApp.inici} element={<Inici />} />

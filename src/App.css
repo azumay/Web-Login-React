@@ -1,16 +1,15 @@
-
-.imgServei{
+.imgServei {
   width: 200px;
 }
 
-/* ESTILOS FORM CITA PREVIA */
+/* ESTILOS FORM */
 
 .formCitaPrevia {
   max-width: 800px;
   margin: 0 auto;
   width: 50%;
 }
-.formCitaPrevia input{
+.formCitaPrevia input {
   margin-bottom: 15px;
 }
 textarea,
@@ -24,10 +23,9 @@ input {
   width: 100%;
   border-radius: 4px;
   padding: 10px 15px;
-  
+
   font-size: 14px;
   border: 2px solid #6785c1;
-
 }
 
 .label,
@@ -64,10 +62,9 @@ input[type="submit"],
 }
 .containerForm {
   display: grid;
-  grid-template-columns: 1fr ;
+  grid-template-columns: 1fr;
   grid-gap: 20px;
 }
-
 
 .App {
   text-align: center;
@@ -106,4 +103,46 @@ input[type="submit"],
   to {
     transform: rotate(360deg);
   }
+}
+/* ESTILOS PERFIL*/
+.perfil-img {
+  width: 55px !important;
+}
+
+.box-perfil ul {
+  margin: 0;
+  width: 100%;
+  padding: 0;
+  padding-top: 0px;
+  list-style-type: none;
+}
+.usuario {
+  float: left;
+  border-top: 4px solid #fcb150;
+
+  text-align: center;
+}
+.mail {
+  border-top: 4px solid #11a8ab;
+  float: left;
+}
+.box-perfil li {
+  border-right: 2px solid #1f253d;
+  border-bottom: 1px solid #1f253d;
+  border-left: 2px solid #1f253d;
+  text-align: center;
+  width: 100%;
+}
+.info-user {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  width: 50%;
+  margin: 50px auto;
+}
+
+.logout svg{
+  color: red;
+  font-size: 45px;
+  cursor: pointer;
 }
